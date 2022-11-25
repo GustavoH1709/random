@@ -1,0 +1,21 @@
+.App {
+  height: 100vh;
+  z-index: -999;
+}
+
+.Points {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  background-color: azure;
+  z-index: 999;
+}
+
+body {
+  background-color: beige;
+}
