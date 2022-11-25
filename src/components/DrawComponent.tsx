@@ -28,7 +28,7 @@ export const DrawComponent = function () {
 
   return (
     <div className="App" onMouseMove={handleMouseMove}>
-      {points.map((e) => e)}
+      {points}
     </div>
   );
 };
