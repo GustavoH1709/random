@@ -5,12 +5,12 @@ export const DrawComponent = function () {
   const handleMouseMove = function (e: React.MouseEvent) {
     let nPoint = points;
 
-    if (points.length > 25 && nPoint.length > 0) nPoint = nPoint.slice(1);
+    if (points.length > 50 && nPoint.length > 0) nPoint = nPoint.slice(1);
 
     nPoint.push(
       <div
         key={e.clientX * e.clientY * Math.random()}
-        className="Points"
+        className="Points glowing-circle"
         style={{
           marginLeft: `${e.clientX - 15}px`,
           marginTop: `${e.clientY - 50}px`,
@@ -19,6 +19,7 @@ export const DrawComponent = function () {
           backgroundColor: `${
             "#" + Math.floor(Math.random() * 10000).toString(16)
           }`,
+          boxShadow: ""
         }}
       />
     );
