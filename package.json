@@ -1,5 +1,5 @@
 {
-  "homepage": "http://GustavoH1709.github.io/random",
+  "homepage": "https://GustavoH1709.github.io/random",
   "name": "random",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^4.0.0",

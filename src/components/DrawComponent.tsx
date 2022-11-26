@@ -10,7 +10,7 @@ export const DrawComponent = function () {
     nPoint.push(
       <div
         key={e.clientX * e.clientY * Math.random()}
-        className="Points glowing-circle"
+        className="Points"
         style={{
           marginLeft: `${e.clientX - 15}px`,
           marginTop: `${e.clientY - 50}px`,
