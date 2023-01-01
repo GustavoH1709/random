@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const DrawComponent = function () {
-  const [points, setPoints] = useState<JSX.Element[]>([]);
+interface Props {
+  points: JSX.Element[]
+  setPoints: React.Dispatch<React.SetStateAction<JSX.Element[]>>
+}
+
+export const DrawComponent = function ({points, setPoints} : Props) {
   const handleMouseMove = function (e: React.MouseEvent) {
     let nPoint = points;
 
@@ -9,7 +13,7 @@ export const DrawComponent = function () {
 
     nPoint.push(
       <div
-        key={e.clientX * e.clientY * Math.random()}
+        key={crypto.randomUUID()}
         className="Points"
         style={{
           marginLeft: `${e.clientX - 15}px`,
@@ -19,7 +23,8 @@ export const DrawComponent = function () {
           backgroundColor: `${
             "#" + Math.floor(Math.random() * 10000).toString(16)
           }`,
-          boxShadow: ""
+          boxShadow: "",
+          zIndex:'-1'
         }}
       />
     );

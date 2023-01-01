@@ -9,8 +9,7 @@
 }
 
 .btn {
-  margin-top: 1rem;
-  margin-left: 0.5rem;
+  padding: .7rem;
   border: none;
   background-color: azure;
   z-index: 999;
